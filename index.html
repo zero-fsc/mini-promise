@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <script>
+      let p = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("OK");
+          reject("OK");
+        }, 1000);
+      });
+      console.log(p);
+      p.then(
+        (res) => {
+          console.log(res);
+        },
+        (err) => {
+          console.warn(err);
+        }
+      );
+      //   p.then(
+      //     (value) => {
+      //       console.log(value);
+      //     },
+      //     (err) => {
+      //       console.log(err);
+      //     }
+      //   );
+    </script>
+  </body>
+</html>
